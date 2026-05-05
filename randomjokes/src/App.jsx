@@ -1,53 +1,44 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 
 function App() {
-  const [quotes, setQuotes] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState('')
-  const [query, setQuery] = useState('')
-  const [random, setRandom] = useState(null)
+  const [jokes, setJokes] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [random, setRandom] = useState(null);
 
   useEffect(() => {
-    fetchQuotes()
-  }, [])
+    fetchJokes();
+  }, []);
 
-  const fetchQuotes = async () => {
-    setLoading(true)
-    setError('')
+  const fetchJokes = async () => {
+    setLoading(true);
+    setError("");
     try {
-      const res = await fetch('https://api.freeapi.app/api/v1/public/quotes')
-      if (!res.ok) throw new Error(`HTTP ${res.status}`)
-      const json = await res.json()
-      const items = json?.data?.data ?? []
-      setQuotes(items)
-      setRandom(items.length ? items[Math.floor(Math.random() * items.length)] : null)
-    } catch (err) {
-      setError(err.message || 'Failed to load quotes')
+      const res = await fetch(
+        "https://api.freeapi.app/api/v1/public/randomjokes",
+      );
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const json = await res.json();
+      const items = json?.data?.data ?? [];
+      setJokes(items);
+      setRandom(
+        items.length ? items[Math.floor(Math.random() * items.length)] : null,
+      );
+    } catch (error) {
+      setError(error.message || "Error aa gya oye!!!");
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
-
-  const filtered = quotes.filter(q => {
-    const text = `${q.content} ${q.author}`.toLowerCase()
-    return text.includes(query.toLowerCase())
-  })
+  };
 
   const handleCopy = async (text) => {
     try {
-      await navigator.clipboard.writeText(text)
-      alert('Copied to clipboard')
+      await navigator.clipboard.writeText(text);
+      alert("Copied to Clipboard!");
     } catch {
-      alert('Copy failed')
+      alert("Copy failed");
     }
-  }
-
-  const handleSurprise = () => {
-    if (!quotes.length) return
-    const r = quotes[Math.floor(Math.random() * quotes.length)]
-    setRandom(r)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 px-6 py-10">
@@ -124,3 +115,6 @@ function App() {
 }
 
 export default App;
+
+
+
