@@ -1,16 +1,47 @@
-# React + Vite
+# Random Products
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Product showcase app with image-first cards and quick pricing insights.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://random-products-eight.vercel.app/
 
-## React Compiler
+## Screenshot
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![Random Products Screenshot](https://github.com/user-attachments/assets/8544f792-203d-4ef9-891f-b12f860da011)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Fetch random products from FreeAPI
+- Masonry-like responsive column layout
+- Product thumbnail, title, and description preview
+- Price, discount, rating, and stock display
+- Manual reload button for fresh items
+
+## Tech Stack
+
+- React
+- Vite
+- Fetch API
+- Tailwind utility classes
+
+## API Endpoint
+
+`https://api.freeapi.app/api/v1/public/randomproducts`
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+## Available Scripts
+
+- `npm run dev` - start development server
+- `npm run build` - build for production
+- `npm run preview` - preview production build
+
+## Project Goal
+
+Practice rendering commerce-style cards from dynamic API data.

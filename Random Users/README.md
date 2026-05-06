@@ -1,16 +1,47 @@
-# React + Vite
+# Random Users
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Profile discovery app that fetches and displays random user cards.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://react-projects-l573.vercel.app/
 
-## React Compiler
+## Screenshot
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![Random Users Screenshot](https://github.com/user-attachments/assets/f4d13663-e6e0-47a1-943e-381086dba753)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Fetch random users from FreeAPI
+- Responsive card grid layout
+- User profile details (name, email, age, phone, location, nationality)
+- Manual refresh button
+- Loading spinner and error handling
+
+## Tech Stack
+
+- React
+- Vite
+- Fetch API
+- Tailwind utility classes
+
+## API Endpoint
+
+`https://api.freeapi.app/api/v1/public/randomusers`
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+## Available Scripts
+
+- `npm run dev` - start development server
+- `npm run build` - build for production
+- `npm run preview` - preview production build
+
+## Project Goal
+
+Practice list rendering and visual presentation of API-driven profile data.

@@ -1,16 +1,47 @@
-# React + Vite
+# Random Jokes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Simple jokes app with featured joke highlight, refresh, and copy functionality.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://react-projects-sslh.vercel.app/
 
-## React Compiler
+## Screenshot
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![Random Jokes Screenshot](https://github.com/user-attachments/assets/70817552-0cc9-4224-889b-8a12adc95d42)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Fetch random jokes from FreeAPI
+- Display a featured joke section
+- Show joke list in responsive cards
+- Copy joke text to clipboard
+- Loading and error handling
+
+## Tech Stack
+
+- React
+- Vite
+- Fetch API
+- Tailwind utility classes
+
+## API Endpoint
+
+`https://api.freeapi.app/api/v1/public/randomjokes`
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+## Available Scripts
+
+- `npm run dev` - start development server
+- `npm run build` - build for production
+- `npm run preview` - preview production build
+
+## Project Goal
+
+Practice handling fetched list data, feature cards, and clipboard interactions.

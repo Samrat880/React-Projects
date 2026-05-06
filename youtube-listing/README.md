@@ -1,16 +1,48 @@
-# React + Vite
+# YouTube Listing
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Premium-style video listing interface powered by FreeAPI YouTube feed data.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://youtube-listing-lemon.vercel.app/
 
-## React Compiler
+## Screenshot
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![YouTube Listing Screenshot](https://github.com/user-attachments/assets/0bdeb7d6-7dbb-4db4-8bce-f1d8fae5de43)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Fetch and normalize video feed response data
+- Display responsive video cards with metadata
+- Parse and format ISO-8601 durations
+- Compact formatting for views and likes
+- Loading skeletons, empty state, and error state
+- External links to original YouTube videos
+
+## Tech Stack
+
+- React
+- Vite
+- Fetch API
+- Tailwind utility classes
+
+## API Endpoint
+
+`https://api.freeapi.app/api/v1/public/youtube/videos`
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+## Available Scripts
+
+- `npm run dev` - start development server
+- `npm run build` - build for production
+- `npm run preview` - preview production build
+
+## Project Goal
+
+Practice transforming nested API data into a polished, production-like listing UI.

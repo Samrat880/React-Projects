@@ -1,16 +1,55 @@
-# React + Vite
+# Authentication App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Token-based authentication app using FreeAPI user endpoints.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://authentication-app-two-topaz.vercel.app/
 
-## React Compiler
+## Screenshot
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![Authentication App Screenshot](https://github.com/user-attachments/assets/c4053353-76d3-43f7-beeb-c20805901f69)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Register a new user (username, email, password)
+- Login with username and password
+- Persist access token in local storage
+- Fetch current user profile using bearer token
+- Logout (API + local cleanup)
+- Toast notifications for success and failure states
+
+## Tech Stack
+
+- React
+- Vite
+- Fetch API
+- Tailwind utility classes
+
+## API Endpoints Used
+
+- `POST /api/v1/users/register`
+- `POST /api/v1/users/login`
+- `GET /api/v1/users/current-user`
+- `POST /api/v1/users/logout`
+
+Base URL:
+
+`https://api.freeapi.app/api/v1/users`
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+## Available Scripts
+
+- `npm run dev` - start development server
+- `npm run build` - build for production
+- `npm run preview` - preview production build
+
+## Project Goal
+
+Practice full authentication flow handling in a React SPA with token lifecycle management.

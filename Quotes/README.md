@@ -1,16 +1,48 @@
-# React + Vite
+# Quotes Gallery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Quote browsing app with search, refresh, featured quote, and copy-to-clipboard actions.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://random-quotes-omega-ten.vercel.app/
 
-## React Compiler
+## Screenshot
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![Quotes Gallery Screenshot](https://github.com/user-attachments/assets/9bc0a946-9dbf-437d-b950-96f4ed506bef)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Fetch quotes from FreeAPI
+- Highlight a random featured quote
+- Search by quote text or author
+- Copy quote text with author to clipboard
+- Refresh data and random pick
+- Loading and error states
+
+## Tech Stack
+
+- React
+- Vite
+- Fetch API
+- Tailwind utility classes
+
+## API Endpoint
+
+`https://api.freeapi.app/api/v1/public/quotes`
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+## Available Scripts
+
+- `npm run dev` - start development server
+- `npm run build` - build for production
+- `npm run preview` - preview production build
+
+## Project Goal
+
+Practice API data rendering, client-side filtering, and reusable UI actions.
